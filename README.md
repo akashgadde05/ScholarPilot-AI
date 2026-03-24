@@ -20,8 +20,7 @@
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" />
 </p>
 
-<br/>
-[![Live App](https://img.shields.io/badge/Live%20App-Streamlit-brightgreen?style=for-the-badge&logo=streamlit)](https://airesearchassistant5.streamlit.app)
+
 
  **ResearchPilot** is a 100% free, open-source AI-powered platform that helps final-year engineering students go from a blank page to a structured IEEE-ready research paper — in under 30 minutes.
 

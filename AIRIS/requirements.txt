@@ -1,0 +1,20 @@
+# requirements.txt — ResearchAI v2
+# Install order matters! Follow the README.
+
+# 1. Core UI
+streamlit>=1.32.0
+
+# 2. Machine Learning (CPU-only torch — much smaller download)
+# Install torch FIRST with:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.1.0
+
+# 3. HuggingFace (AI Tutor)
+transformers>=4.40.0
+sentencepiece>=0.1.99
+
+# 4. Enhanced gap analysis (NEW in v2)
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# Total download ~700MB first run (torch is the big one)
+# All FREE and open-source

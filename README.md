@@ -52,8 +52,8 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/ResearchPilot.git
-cd ResearchPilot
+git clone https://github.com/akashgadde05/ScholarPilot-AI.git
+cd ScholarPilot-AI
 
 # 2. Create and activate virtual environment
 python -m venv venv

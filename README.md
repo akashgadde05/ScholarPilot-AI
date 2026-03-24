@@ -270,8 +270,8 @@ $$\text{cov}(T_k) = 0.4 \cdot r_k^{\text{lex}} + 0.6 \cdot r_k^{\text{tfidf}}$$
 
 ```bash
 # Clone
-git clone https://github.com/your-username/ResearchPilot.git
-cd ResearchPilot
+git clone https://github.com/akashgadde05/ScholarPilot-AI.git
+cd AIRIS
 
 # Virtual environment
 python -m venv venv
@@ -628,7 +628,7 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 <br/>
 
-[![Star History Chart](https://api.star-history.com/svg?repos=your-username/ResearchPilot&type=Date)](https://star-history.com/#your-username/ResearchPilot&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=akashgadde05/ScholarPilot-AI&type=Date)](https://star-history.com/#akashgadde05/ScholarPilot-AI&Date)
 
 <br/>
 

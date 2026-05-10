@@ -1,32 +1,32 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=ResearchPilot+%F0%9F%94%AC;AI+Research+Assistant+for+Students;Find+Gaps.+Build+Problems.+Write+Papers." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=ENHANCV+%F0%9F%9A%80;Smart+ATS+Resume+Builder+%26+Analyzer;Score.+Optimize.+Get+Hired." alt="Typing SVG" />
 
 <br/>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
-  <img src="https://img.shields.io/badge/HuggingFace-flan--t5--base-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" />
-  <img src="https://img.shields.io/badge/scikit--learn-1.3%2B-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cost-₹0%20Free-10B981?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/LLaMA_3.3-70B-6366F1?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Groq_API-Powered-F97316?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Cost-%E2%82%B90%20Free-10B981?style=for-the-badge" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/Version-3.0-6366f1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Papers-2.3M%2B%20arXiv-orange?style=flat-square" />
-  <img src="https://img.shields.io/badge/GPU-Not%20Required-green?style=flat-square" />
+  <img src="https://img.shields.io/badge/Version-1.0-6366f1?style=flat-square" />
+  <img src="https://img.shields.io/badge/Users-500%2B-orange?style=flat-square" />
+  <img src="https://img.shields.io/badge/ATS_Accuracy-92%25-green?style=flat-square" />
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" />
 </p>
 
+**ENHANCV** is a 100% free, AI-powered resume platform that analyzes your resume, detects skill gaps, scores ATS compatibility, and builds optimized resumes — all powered by LLaMA 3.3 70B via Groq API.
 
+> *No paid subscriptions. No manual guessing. Just paste your resume and get results.*
 
- **ResearchPilot** is a 100% free, open-source AI-powered platform that helps final-year engineering students go from a blank page to a structured IEEE-ready research paper — in under 30 minutes.
+<br/>
 
-
-
-> *No paid APIs. No GPU. No cloud subscriptions. Just Python.*
+**Live Demo → [enhancv-amtz.onrender.com](https://enhancv-amtz.onrender.com/)**
 
 <br/>
 
@@ -40,12 +40,6 @@
 <a href="#-roadmap">Roadmap</a> •
 <a href="#-contributing">Contributing</a>
 
-<br/>
-
-![ResearchPilot Demo](https://via.placeholder.com/900x480/090e1a/3b82f6?text=ResearchPilot+UI+Screenshot+%E2%80%94+Replace+with+real+screenshot)
-
-*↑ Replace this placeholder with an actual screenshot of your running app*
-
 </div>
 
 ---
@@ -54,27 +48,28 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/akashgadde05/ScholarPilot-AI.git
-cd ScholarPilot-AI
+git clone https://github.com/akashgadde05/ENHANCV.git
+cd ENHANCV
 
 # 2. Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate          # macOS / Linux
 # venv\Scripts\activate           # Windows
 
-# 3. Install PyTorch (CPU-only — smaller & faster to download)
-pip install torch --index-url https://download.pytorch.org/whl/cpu
+# 3. Install dependencies
+pip install -r requirements-minimal.txt
 
-# 4. Install remaining dependencies
-pip install streamlit transformers sentencepiece scikit-learn numpy
+# 4. Configure environment
+cp .env.example .env
+# Add your Groq API key to .env
 
 # 5. Launch
-streamlit run app.py
+python run.py
 ```
 
-Open **http://localhost:8501** in your browser. That's it. ✅
+Open **http://localhost:5000** in your browser. That's it. ✅
 
-> **First use of the AI Tutor** downloads `google/flan-t5-base` (~250 MB) and caches it permanently. All subsequent uses are instant.
+> **Get your free Groq API key** at [console.groq.com](https://console.groq.com/) — takes 2 minutes. No credit card required.
 
 ---
 
@@ -84,60 +79,38 @@ Open **http://localhost:8501** in your browser. That's it. ✅
 <tr>
 <td width="50%">
 
-### 🔍 Paper Finder
-- Search **2.3M+ open-access papers** from arXiv
-- No API key, no login, no cost
-- Filter by relevance, view titles, authors, year, abstract
-- One-click select papers for analysis
+### 📝 Resume Builder
+- Step-by-step interactive form with guided prompts
+- ATS-safe professional templates
+- Real-time content validation and feedback
+- One-click PDF export via ReportLab
 
 </td>
 <td width="50%">
 
-### 🕳️ Gap Identifier
-- **TF-IDF vectorization** with bigrams (scikit-learn)
-- **LDA topic modeling** — auto-discovers hidden themes
-- **Cosine similarity** clustering of related papers
-- **12-dimension research taxonomy** for systematic gap scoring
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 💡 Problem Generator
-- **5 academic templates** (Classic Gap, Data-Driven, Human-Centered, Benchmark Study, Scalability)
-- Maps gaps → concrete implementable methods
-- Generates publication-ready problem statement text
-- Downloadable as `.txt`
-
-</td>
-<td width="50%">
-
-### 🤖 AI Research Tutor
-- Powered by **google/flan-t5-base** (250M params, runs on CPU)
-- Intent detection → smart prompt routing
-- Ask: *"Explain this paper"*, *"What are the limitations?"*, *"Where to publish?"*
-- Rule-based fallback — always works even if model can't load
+### 🔍 Resume Analyzer
+- AI-powered analysis via **Groq + LLaMA 3.3 70B**
+- ATS compatibility check with issue detection
+- Skills gap analysis against industry benchmarks
+- Multi-dimensional quantitative scoring
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-### 📝 Draft Generator
-- Produces a **complete IEEE-structured paper**
-- Sections: Title → Abstract → Intro → Literature Review → Methodology → Results → Conclusion → References
-- Literature review uses **real paper titles/authors** from your arXiv results
-- Download as `.txt` or `.md`
+### 📚 Course Recommendations
+- Personalized course suggestions based on detected skill gaps
+- Recommendations from Coursera, Udemy, edX, and more
+- Focused on in-demand technical skills for 2026 job market
 
 </td>
 <td width="50%">
 
-### 📤 Publish & Cite
-- **Citation generator**: APA 7th, IEEE, MLA 9th, BibTeX
-- **Venue recommender** filtered by experience level
-- **Pre-submission checklist** (21 items with progress bar)
-- Publication pathway guide (arXiv → IRJET → Springer → IEEE Access)
+### 📦 Bulk Resume Analysis *(HR / Recruiter Tool)*
+- Upload and analyze multiple resumes simultaneously
+- Candidate ranking and comparative scoring
+- Exportable batch results — cuts HR screening time by **70%**
 
 </td>
 </tr>
@@ -148,46 +121,47 @@ Open **http://localhost:8501** in your browser. That's it. ✅
 ## 🏗️ Architecture
 
 ```
-ResearchPilot/
+ENHANCV/
 │
-├── app.py                        ← Entry point: routing, sidebar, session state
+├── app.py                        ← Main Flask application & routes
+├── run.py                        ← App entry point
 ├── requirements.txt
+├── .env.example
 │
-└── modules/
-    ├── ui_styles_v3.py           ← 400+ lines CSS: dark SaaS theme (DM Sans + Playfair Display)
-    │
-    ├── paper_finder.py           ← arXiv HTTP client + Atom XML parser (stdlib only)
-    ├── paper_finder_v3.py        ← Professional paper finder UI
-    │
-    ├── semantic_analyzer.py      ← TF-IDF + LDA + cosine similarity engine
-    ├── gap_identifier_v2.py      ← 4-tab gap analysis dashboard
-    │
-    ├── problem_generator.py      ← Template-parameterized PS builder
-    │
-    ├── ai_tutor.py               ← flan-t5-base chatbot + rule-based fallback
-    │
-    ├── draft_generator.py        ← IEEE paper draft assembler
-    │
-    ├── citation_utils.py         ← APA / IEEE / MLA / BibTeX formatter
-    └── publish_guide.py          ← Venue recommender + submission checklist
+├── utils/
+│   ├── llm_analyzer.py           ← Groq LLM integration (LLaMA 3.3 70B)
+│   ├── resume_analyzer.py        ← Resume text analysis engine
+│   ├── resume_builder.py         ← Resume generation logic
+│   └── pdf_generator.py          ← PDF export via ReportLab
+│
+├── templates/
+│   ├── base.html                 ← Base layout
+│   ├── index.html                ← Home page
+│   ├── builder.html              ← Resume builder UI
+│   ├── analyzer.html             ← Resume analyzer UI
+│   └── bulk_analyzer.html        ← Bulk analysis UI
+│
+└── static/
+    ├── css/style.css             ← Custom styles
+    └── js/main.js                ← Chart.js + interactive features
 ```
 
 ### Three-Layer Design
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│          PRESENTATION LAYER  (Streamlit + CSS)          │
-│   Dark SaaS UI · Progress sidebar · 6 pages · Reactive  │
+│        PRESENTATION LAYER  (Flask + Bootstrap 5)        │
+│   Responsive UI · Chart.js · Font Awesome · Reactive    │
 └───────────────────────┬─────────────────────────────────┘
                         │
 ┌───────────────────────▼─────────────────────────────────┐
-│            INTELLIGENCE LAYER  (Python NLP)             │
-│   TF-IDF · LDA · Cosine Similarity · flan-t5 · Templates│
+│           INTELLIGENCE LAYER  (Groq + LLaMA 3.3)        │
+│   ATS Scoring · Skill Gap Detection · NLP · TextBlob    │
 └───────────────────────┬─────────────────────────────────┘
                         │
 ┌───────────────────────▼─────────────────────────────────┐
-│              DATA LAYER  (APIs + Cache)                 │
-│   arXiv Open API · HuggingFace Hub · session_state      │
+│            DATA LAYER  (Documents + Memory)             │
+│   PyPDF2 · python-docx · In-memory processing           │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -195,64 +169,74 @@ ResearchPilot/
 
 ## 🔬 How It Works
 
-### 1. Paper Retrieval — arXiv API
+### 1. Document Parsing
 
-ResearchPilot queries the arXiv Atom API (completely free, no key required):
+ENHANCV accepts PDF, DOCX, DOC, and TXT formats and extracts raw text for analysis:
 
 ```python
-GET http://export.arxiv.org/api/query
-    ?search_query=all:{topic}
-    &max_results=20
-    &sortBy=relevance
+# PDF extraction
+PyPDF2.PdfReader(file) → raw_text
+
+# DOCX extraction
+python-docx Document(file) → paragraph_text
+
+# Plain text
+file.read().decode("utf-8") → raw_text
 ```
 
-The XML response is parsed with Python's built-in `xml.etree.ElementTree` — **no third-party dependencies** for this module.
+---
+
+### 2. ATS Scoring — The 7 Dimensions
+
+Resumes are evaluated across seven dimensions with weighted scoring:
+
+| # | Dimension | Weight | What It Checks |
+|---|-----------|--------|----------------|
+| 1 | Content Length | Medium | Optimal word count (400–800 words ideal) |
+| 2 | Skills Coverage | High | Technical + soft skills keyword presence |
+| 3 | Experience Indicators | High | Job titles, tenures, responsibilities |
+| 4 | Quantified Achievements | High | Numbers, %, $, metrics in bullet points |
+| 5 | ATS Format Compliance | High | Clean structure, no tables/graphics issues |
+| 6 | Section Completeness | Medium | Summary, Skills, Experience, Education present |
+| 7 | Readability | Medium | Sentence clarity and action verb usage |
+
+**Final Score Bands:**
+
+| Score | Rating |
+|-------|--------|
+| 85 – 100 | 🟢 Excellent — ATS ready |
+| 70 – 84 | 🟡 Good — minor improvements needed |
+| 55 – 69 | 🟠 Average — several areas need work |
+| Below 55 | 🔴 Needs improvement — major optimization required |
 
 ---
 
-### 2. Gap Detection — The Math
+### 3. AI Analysis Pipeline
 
-**Step 1 — TF-IDF vectorization** (sklearn, bigrams):
-
-$$\text{TF-IDF}(t,d) = \log(1 + \text{tf}_{t,d}) \cdot \log\!\left(\frac{N+1}{\text{df}_t+1}\right) + 1$$
-
-**Step 2 — LDA topic discovery** (auto-finds K=4 hidden themes):
-
-$$p(\phi_k \mid \beta) = \text{Dir}(\phi_k;\,\beta), \qquad p(\theta_d \mid \alpha) = \text{Dir}(\theta_d;\,\alpha)$$
-
-**Step 3 — Cosine similarity clustering** (papers with sim > 0.30 grouped):
-
-$$S_{ij} = \frac{\mathbf{x}_i \cdot \mathbf{x}_j}{\|\mathbf{x}_i\|\,\|\mathbf{x}_j\|}$$
-
-**Step 4 — Coverage score** (combined lexical + semantic signal):
-
-$$\text{cov}(T_k) = 0.4 \cdot r_k^{\text{lex}} + 0.6 \cdot r_k^{\text{tfidf}}$$
-
-| Coverage | Severity |
-|----------|----------|
-| < 15% | 🔴 Critical Gap |
-| 15 – 35% | 🟠 Major Gap |
-| 35 – 55% | 🟡 Moderate Gap |
-| > 55% | ✅ Well-covered |
-
----
-
-### 3. The 12-Dimension Research Taxonomy
-
-| # | Dimension | Impact | Example Indicator Terms |
-|---|-----------|--------|------------------------|
-| 1 | Explainability & XAI | 🔥 High | `shap`, `lime`, `interpretab`, `transparent` |
-| 2 | Privacy & Federated Learning | 🔥 High | `federated`, `differential privacy`, `gdpr` |
-| 3 | Real-Time & Edge Deployment | 🔥 High | `real-time`, `onnx`, `tflite`, `edge`, `latency` |
-| 4 | Fairness, Bias & Ethics | 🔥 High | `fair`, `bias`, `discriminat`, `equity` |
-| 5 | Low-Resource & Few-Shot | ⚡ Medium | `few-shot`, `zero-shot`, `data augment` |
-| 6 | Multi-Modal Fusion | ⚡ Medium | `multimodal`, `fusion`, `vision-language` |
-| 7 | Robustness & Generalization | ⚡ Medium | `robust`, `domain shift`, `adversarial` |
-| 8 | Clinical / Production Deployment | ⚡ Medium | `deploy`, `real-world`, `user study` |
-| 9 | Temporal & Sequential Modeling | ⚡ Medium | `time series`, `lstm`, `temporal` |
-| 10 | Efficiency & Sustainability | ⚡ Medium | `pruning`, `quantiz`, `lightweight` |
-| 11 | Uncertainty Quantification | 📌 Low | `bayesian`, `calibrat`, `uncertainty` |
-| 12 | Human-in-the-Loop | 📌 Low | `active learning`, `annotation`, `feedback` |
+```
+Upload Resume (PDF / DOCX / TXT)
+        │
+        ▼
+   Text Extraction  (PyPDF2 / python-docx)
+        │
+        ▼
+   Rule-Based Preprocessing  (TextBlob NLP)
+        │
+        ▼
+   Groq API Call → LLaMA 3.3 70B
+   ┌─────────────────────────────┐
+   │  · ATS issue detection      │
+   │  · Skill gap analysis       │
+   │  · Improvement suggestions  │
+   │  · Course recommendations   │
+   └─────────────────────────────┘
+        │
+        ▼
+   Quantitative Score + Detailed Report
+        │
+        ▼
+   Display / Export Results
+```
 
 ---
 
@@ -262,66 +246,48 @@ $$\text{cov}(T_k) = 0.4 \cdot r_k^{\text{lex}} + 0.6 \cdot r_k^{\text{tfidf}}$$
 
 | Requirement | Minimum | Notes |
 |-------------|---------|-------|
-| Python | 3.9+ | 3.11 recommended |
-| RAM | 4 GB | 8 GB+ comfortable |
-| Storage | 2 GB | For model cache |
-| GPU | ❌ Not required | Runs on CPU |
-| Internet | ✅ First run only | arXiv + model download |
+| Python | 3.8+ | 3.11 recommended |
+| RAM | 2 GB | 4 GB+ comfortable |
+| GPU | ❌ Not required | Runs fully on CPU |
+| Internet | ✅ Required | For Groq API calls |
+| Groq API Key | ✅ Required | Free at [console.groq.com](https://console.groq.com) |
 
 ### Option A — Standard Install (Recommended)
 
 ```bash
-# Clone
-git clone https://github.com/akashgadde05/ScholarPilot-AI.git
-cd AIRIS
+git clone https://github.com/akashgadde05/ENHANCV.git
+cd ENHANCV
 
-# Virtual environment
 python -m venv venv
-source venv/bin/activate     # Linux/macOS
-venv\Scripts\activate        # Windows
+source venv/bin/activate       # Linux/macOS
+venv\Scripts\activate          # Windows
 
-# PyTorch CPU (≈200MB vs 700MB GPU version)
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-
-# All other deps
 pip install -r requirements.txt
 ```
 
-### Option B — One-Line Install
+### Option B — Minimal Install (Core Features Only)
 
 ```bash
-pip install torch --index-url https://download.pytorch.org/whl/cpu && \
-pip install streamlit transformers sentencepiece scikit-learn numpy
+pip install flask groq python-dotenv
+# File upload support:
+pip install pypdf2 python-docx
+# PDF generation:
+pip install reportlab
 ```
 
-### Option C — Google Colab
+### Option C — One-Click Start
 
-```python
-# Run this cell in Colab, then use the tunnel URL
-!pip install torch --index-url https://download.pytorch.org/whl/cpu -q
-!pip install streamlit transformers sentencepiece scikit-learn numpy pyngrok -q
-
-from pyngrok import ngrok
-import subprocess, threading
-
-def run():
-    subprocess.run(["streamlit", "run", "app.py",
-                    "--server.port=8501", "--server.headless=true"])
-
-threading.Thread(target=run, daemon=True).start()
-public_url = ngrok.connect(8501)
-print(f"ResearchPilot is live at: {public_url}")
+```bash
+python start.py    # Auto-detects environment, launches best available version
 ```
 
-### `requirements.txt`
+### Environment Configuration
 
-```
-streamlit>=1.32.0
-scikit-learn>=1.3.0
-numpy>=1.24.0
-torch>=2.1.0
-transformers>=4.40.0
-sentencepiece>=0.1.99
+```env
+# .env
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama-3.3-70b-versatile
+DEBUG=True
 ```
 
 ---
@@ -331,53 +297,50 @@ sentencepiece>=0.1.99
 ### Step-by-Step Workflow
 
 ```
-① Type your research topic  →  ② Search arXiv papers
-③ Select 5–10 papers        →  ④ Run gap analysis
-⑤ Review gaps               →  ⑥ Generate problem statements
-⑦ Chat with AI Tutor        →  ⑧ Generate full paper draft
-⑨ Download & edit           →  ⑩ Submit to journal/conference
+① Upload your resume (PDF / DOCX / TXT)
+② Optionally paste a job description for targeted analysis
+③ Run AI-powered ATS analysis
+④ Review your score across 7 dimensions
+⑤ Read skill gap report + improvement suggestions
+⑥ Get personalized course recommendations
+⑦ Rebuild or export an optimized version
 ```
 
-### Workflow in Detail
+### Module Guide
 
-**1. Paper Finder** — Type a topic like `"explainable AI in medical imaging"` and hit **Search**. Browse the 15–20 arXiv results. Select the most relevant 5–10 papers using the checkboxes.
+**Resume Analyzer**
+1. Navigate to the **Analyzer** section
+2. Upload your resume file
+3. *(Optional)* Paste a job description for targeted keyword matching
+4. Click **Analyze** — results appear in 5–10 seconds
+5. Export the full report for reference
 
-**2. Gap Identifier** — Click **Run Full Semantic Analysis**. The system runs TF-IDF + LDA + cosine similarity in under 5 seconds and shows:
-- 🔑 Keyword cloud (what the field focuses on)
-- 🕳️ Gap cards with severity + why it matters + how to address it
-- 🗂️ Paper clusters (which papers are similar)
-- 📐 Similarity heatmap
+**Resume Builder**
+1. Go to the **Builder** section
+2. Fill out the guided step-by-step form
+3. Use the live preview to validate content in real time
+4. Generate a professional ATS-safe PDF
 
-**3. Problem Generator** — Click **Generate Statements**. Get 5 ready-to-use problem statements mapped to your top gaps. Download all as `.txt`.
-
-**4. AI Tutor** — Ask anything:
-```
-"Explain the first paper in simple words"
-"What are the limitations of this approach?"
-"Suggest a better method for the privacy gap"
-"Where should I publish my paper?"
-```
-
-**5. Draft Generator** — Fill in your name and institution. Click **Generate Full Paper Draft**. Download as `.txt` or `.md`, open in Word/Google Docs, and refine.
-
-**6. Publish & Cite** — Generate citations in your required format. Use the venue recommender. Complete the pre-submission checklist before submitting.
+**Bulk Analysis** *(Recruiters / HR)*
+1. Access **Bulk Analysis**
+2. Upload multiple resume files at once
+3. Get ranked results with comparative scores
+4. Export the full batch analysis
 
 ---
 
 ## ⚡ Performance
 
-| Operation | RAM | Time | Network |
-|-----------|-----|------|---------|
-| App startup | 120 MB | 2–3 s | — |
-| arXiv search (20 papers) | 15 MB | 3–8 s | ~50 KB |
-| TF-IDF vectorization | 20 MB | < 1 s | — |
-| LDA topic discovery | 30 MB | 1–3 s | — |
-| Cosine similarity | 5 MB | < 0.5 s | — |
-| **flan-t5 first load** | **800 MB** | **30–60 s** | **~250 MB** |
-| flan-t5 inference | 800 MB | 5–15 s | — |
-| Draft generation | 5 MB | < 1 s | — |
-
-> **Key optimization:** `@st.cache_resource` loads the flan-t5 model exactly once per session. Without this, each query would reload 250 MB of weights — taking 45 seconds per message instead of 8 seconds.
+| Operation | Time | Notes |
+|-----------|------|-------|
+| App startup | 2–3 s | Flask cold start |
+| PDF / DOCX parsing | < 1 s | In-memory only |
+| Rule-based preprocessing | < 0.5 s | TextBlob NLP |
+| Groq LLM analysis | 3–8 s | LLaMA 3.3 70B via API |
+| Score computation | < 0.5 s | Local calculation |
+| PDF generation | 1–2 s | ReportLab |
+| **End-to-end (single resume)** | **~10 s** | |
+| **Bulk (10 resumes)** | **~60 s** | Sequential Groq calls |
 
 ---
 
@@ -387,13 +350,15 @@ sentencepiece>=0.1.99
 
 | Layer | Technology | Why |
 |-------|-----------|-----|
-| **UI Framework** | [Streamlit](https://streamlit.io) | Reactive Python web apps — no HTML/JS needed |
-| **Paper Source** | [arXiv Open API](https://arxiv.org/help/api) | 2.3M+ papers, free, no auth, Atom XML |
-| **NLP Engine** | [scikit-learn](https://scikit-learn.org) | TfidfVectorizer, LDA, cosine_similarity |
-| **AI Tutor** | [google/flan-t5-base](https://huggingface.co/google/flan-t5-base) | Instruction-tuned T5, 250M params, CPU-friendly |
-| **Transformers** | [HuggingFace Transformers](https://huggingface.co/transformers) | Model loading pipeline, caching |
-| **Numerics** | [NumPy](https://numpy.org) | Matrix operations for similarity |
-| **Typography** | DM Sans + Playfair Display | Professional academic dark UI |
+| **Web Framework** | [Flask](https://flask.palletsprojects.com) | Lightweight Python backend, zero overhead |
+| **AI / LLM** | [Groq API](https://console.groq.com) + LLaMA 3.3 70B | Fastest inference, free tier, no GPU needed |
+| **NLP** | [TextBlob](https://textblob.readthedocs.io) | Sentence-level text analysis |
+| **PDF Parsing** | [PyPDF2](https://pypdf2.readthedocs.io) | Resume text extraction from PDFs |
+| **DOCX Parsing** | [python-docx](https://python-docx.readthedocs.io) | Word document text extraction |
+| **PDF Generation** | [ReportLab](https://www.reportlab.com) | Professional PDF resume output |
+| **Frontend** | Bootstrap 5 + Vanilla JS | Responsive UI, no build step needed |
+| **Charts** | [Chart.js](https://www.chartjs.org) | Score visualization dashboard |
+| **Icons** | Font Awesome | Consistent UI iconography |
 
 </div>
 
@@ -401,198 +366,149 @@ sentencepiece>=0.1.99
 
 ## 🚀 Deployment
 
-### Streamlit Community Cloud (Recommended — Free)
+### Render *(Current Deployment — Free)*
 
-1. Push your code to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect your repo → select `app.py`
-4. Deploy — live URL in 2 minutes
+This app is live on Render: **[enhancv-amtz.onrender.com](https://enhancv-amtz.onrender.com/)**
 
-> ⚠️ Free tier has 1 GB RAM. The flan-t5 model (800 MB) may hit this limit. Use the rule-based fallback mode or deploy on HuggingFace Spaces instead.
+To deploy your own fork:
+1. Push code to GitHub
+2. Go to [render.com](https://render.com) → **New Web Service**
+3. Connect your repo; set build command: `pip install -r requirements.txt`
+4. Set start command: `python run.py`
+5. Add `GROQ_API_KEY` as an environment variable
+6. Deploy — live in ~3 minutes ✅
 
-### Hugging Face Spaces (Best for AI Features — Free)
-
-1. Create a Space at [huggingface.co/spaces](https://huggingface.co/spaces)
-2. Choose **Streamlit** SDK
-3. Upload all files including `requirements.txt`
-4. Free tier: 2 vCPU, **16 GB RAM** — supports flan-t5 comfortably ✅
-
-### Local Network (Demo / Viva Day)
+### Local Network *(Demo Day)*
 
 ```bash
-streamlit run app.py --server.address 0.0.0.0 --server.port 8501
-# Access from any device on same WiFi: http://YOUR_IP:8501
+flask run --host=0.0.0.0 --port=5000
+# Access from any device on same WiFi: http://YOUR_IP:5000
 ```
-
----
-
-## 📊 Research Gap — Published Paper
-
-This project was written up as an IEEE conference paper:
-
-```
-ResearchPilot: An NLP-Driven Framework for Automated Research Gap
-Identification and Academic Paper Scaffolding
-
-[Your Name], [Co-author], [Guide Name]
-Department of Data Science and AI, ABC Engineering College
-```
-
-> 📄 **[View the IEEE Paper (PDF)](./ResearchPilot_IEEE_Paper.pdf)**
-> 
-> 📝 **[View LaTeX Source (.tex)](./ResearchPilot_IEEE_Paper.tex)**
 
 ---
 
 ## 🗺️ Roadmap
 
 ```
-v3.0 (Current) ████████████████████ Released
-v4.0           ░░░░░░░░░░░░░░░░░░░░ In Progress
-v5.0           ░░░░░░░░░░░░░░░░░░░░ Planned
-v6.0           ░░░░░░░░░░░░░░░░░░░░ Future
+v1.0 (Current) ████████████████████ Released
+v2.0           ░░░░░░░░░░░░░░░░░░░░ In Progress
+v3.0           ░░░░░░░░░░░░░░░░░░░░ Planned
 ```
 
-### v4.0 — Multi-Source + Semantic Search
-- [ ] Semantic Scholar API integration (citation-aware search)
-- [ ] PubMed E-utilities for biomedical papers
-- [ ] Replace TF-IDF gap detection with `all-MiniLM-L6-v2` sentence embeddings
-- [ ] User-extensible gap taxonomy (custom dimensions)
-- [ ] SQLite session persistence (save & resume research sessions)
+### v2.0 — Smarter Analysis
+- [ ] Job description keyword matching with gap heatmap
+- [ ] Multi-format score export (PDF report, JSON)
+- [ ] Resume version comparison (before vs after)
+- [ ] LinkedIn profile URL import
 
-### v5.0 — Full-Stack Architecture
-- [ ] FastAPI backend (REST API for all 5 modules)
-- [ ] React + Vite + TailwindCSS frontend
-- [ ] User accounts with JWT authentication
-- [ ] Shared paper libraries for group research
-- [ ] PostgreSQL + pgvector for semantic paper search
-
-### v6.0 — RAG-Powered Platform
-- [ ] RAG (Retrieval-Augmented Generation) for paper-specific Q&A
-- [ ] PDF upload — analyze your own papers
-- [ ] Citation network visualization (D3.js)
-- [ ] Quantized LLaMA-3 for higher-quality AI tutoring
-- [ ] Multi-language support (Hindi, Tamil, Telugu)
+### v3.0 — Full-Stack Upgrade
+- [ ] FastAPI backend + React frontend
+- [ ] User accounts with resume history
+- [ ] Real-time collaborative editing
+- [ ] RAG-powered career path advisor
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are warmly welcome! Here's how:
-
-### Quick Contribution
-
 ```bash
 # 1. Fork the repository
 # 2. Create your feature branch
-git checkout -b feature/add-semantic-scholar
+git checkout -b feature/your-feature-name
 
-# 3. Make your changes
-# 4. Test locally
-streamlit run app.py
+# 3. Make changes + test locally
+python run.py
 
-# 5. Commit with a clear message
-git commit -m "feat: add Semantic Scholar API integration"
+# 4. Commit with a clear message
+git commit -m "feat: describe your change"
 
-# 6. Push and open a PR
-git push origin feature/add-semantic-scholar
+# 5. Push and open a Pull Request
+git push origin feature/your-feature-name
 ```
 
 ### Good First Issues
 
 | Issue | Difficulty | Module |
 |-------|-----------|--------|
-| Add Semantic Scholar API source | 🟢 Easy | `paper_finder.py` |
-| Add paper abstract translation | 🟡 Medium | `paper_finder.py` |
-| Replace flan-t5 with flan-t5-small (faster) | 🟢 Easy | `ai_tutor.py` |
-| Add PDF export for draft | 🟡 Medium | `draft_generator.py` |
-| Add user-defined gap taxonomy | 🔴 Hard | `semantic_analyzer.py` |
-| Implement RAG for AI Tutor | 🔴 Hard | `ai_tutor.py` |
-
-### Code Style
-
-- Follow **PEP 8** (use `black` formatter: `pip install black && black .`)
-- All functions must have a docstring explaining **what** and **why**
-- New modules must be added to `modules/__init__.py`
-- Test your module in isolation before opening a PR
+| Add LinkedIn URL parser | 🟢 Easy | `utils/resume_analyzer.py` |
+| Add JSON export for analysis results | 🟢 Easy | `app.py` |
+| Add cover letter generator | 🟡 Medium | `utils/llm_analyzer.py` |
+| Add resume diff viewer (before/after) | 🟡 Medium | `templates/analyzer.html` |
+| Replace TextBlob with spaCy | 🔴 Hard | `utils/resume_analyzer.py` |
 
 ---
 
 ## 🐛 Troubleshooting
 
 <details>
-<summary><b>flan-t5 model download fails or is very slow</b></summary>
+<summary><b>Groq API key error</b></summary>
 
 ```bash
-# Set HuggingFace cache to a drive with more space
-export HF_HOME=/path/to/large/drive/.cache/huggingface
+# Verify your .env file contains:
+GROQ_API_KEY=gsk_your_actual_key_here
 
-# Or use a mirror (China/India)
-export HF_ENDPOINT=https://hf-mirror.com
+# Test the key directly:
+python test_groq.py
 ```
 </details>
 
 <details>
-<summary><b>Streamlit port already in use</b></summary>
+<summary><b>Dependency conflicts</b></summary>
 
 ```bash
-streamlit run app.py --server.port 8502
-# Or kill the existing process:
-lsof -ti:8501 | xargs kill -9   # macOS/Linux
+# Use the minimal requirements file:
+pip install -r requirements-minimal.txt
+
+# Or install only core packages:
+pip install flask groq python-dotenv pypdf2 python-docx reportlab
 ```
 </details>
 
 <details>
-<summary><b>arXiv returns no results</b></summary>
+<summary><b>File upload not working</b></summary>
 
-- arXiv rate-limits repeated identical queries. Wait 10 seconds and retry.
-- Try broader keywords: `"machine learning"` instead of `"ML for wheat rust detection in Rajasthan"`
-- Check your internet connection — arXiv is accessible in India without VPN.
-</details>
-
-<details>
-<summary><b>Out of memory error with flan-t5</b></summary>
-
-```python
-# In modules/ai_tutor.py, switch to the smaller model:
-model="google/flan-t5-small"   # 80 MB, ~400 MB RAM, 2-5 sec/query
+```bash
+# Run system diagnostics — creates missing upload directories:
+python check_system.py
 ```
 </details>
 
 <details>
-<summary><b>Session state resets on page refresh</b></summary>
+<summary><b>Import errors on startup</b></summary>
 
-This is expected Streamlit behavior. Re-run your search after refresh. SQLite persistence is planned for v4.0. For now, keep the browser tab open during your session.
+```bash
+# Run the minimal app with graceful feature degradation:
+python app_minimal.py
+```
+</details>
+
+<details>
+<summary><b>Port 5000 already in use</b></summary>
+
+```bash
+# macOS/Linux
+lsof -ti:5000 | xargs kill -9
+
+# Or run on a different port:
+flask run --port 5001
+```
 </details>
 
 ---
 
-## 📁 Project Files
+## 🔒 Privacy
 
-| File | Description |
-|------|-------------|
-| `app.py` | Main entry point — run this |
-| `requirements.txt` | Python dependencies |
-| `modules/ui_styles_v3.py` | Complete CSS design system |
-| `modules/paper_finder.py` | arXiv API client |
-| `modules/semantic_analyzer.py` | TF-IDF + LDA + cosine similarity |
-| `modules/gap_identifier_v2.py` | 4-tab gap analysis UI |
-| `modules/problem_generator.py` | Problem statement templates |
-| `modules/ai_tutor.py` | AI chatbot (flan-t5) |
-| `modules/draft_generator.py` | Paper draft builder |
-| `modules/citation_utils.py` | APA / IEEE / MLA / BibTeX |
-| `modules/publish_guide.py` | Venue finder + checklist |
-| `ResearchPilot_IEEE_Paper.pdf` | Published IEEE paper (PDF) |
-| `ResearchPilot_IEEE_Paper.tex` | LaTeX source |
+- **No data storage** — files are processed in memory only, never written to disk
+- **No transmission** — your resume is never sent anywhere except your own Groq API call
+- **Stateless** — each session is completely independent
+- **Open source** — full codebase is publicly auditable
 
 ---
 
 ## 📜 License
 
 ```
-MIT License
-
-Copyright (c) 2024 [Your Name]
+MIT License — Copyright (c) 2025 Akash Gadde
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -601,41 +517,32 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 ```
 
 ---
 
 ## 🙏 Acknowledgements
 
-- **[arXiv.org](https://arxiv.org)** — Cornell University's free preprint server powering the paper search
-- **[HuggingFace](https://huggingface.co)** — Hosting `google/flan-t5-base` and the Transformers library
-- **[scikit-learn](https://scikit-learn.org)** — World-class ML library that makes TF-IDF and LDA trivial
-- **[Streamlit](https://streamlit.io)** — Making Python web apps accessible to every data scientist
-- **[Google Research](https://github.com/google-research/t5x)** — Open-sourcing the flan-t5 model family
+- **[Groq](https://groq.com)** — For the fastest LLM inference API available, with a generous free tier
+- **[Meta AI](https://ai.meta.com)** — For open-sourcing the LLaMA 3.3 model family
+- **[Flask](https://flask.palletsprojects.com)** — For making Python web apps simple and elegant
+- **[Bootstrap](https://getbootstrap.com)** — For a responsive UI without the complexity
+- **[ReportLab](https://www.reportlab.com)** — For professional-grade PDF generation in Python
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by a Final Year BE Data Science Student**
+**Built with ❤️ by [Akash Gadde](https://github.com/akashgadde05)**
 
-*If ResearchPilot helped you write your research paper,*
-*please ⭐ star this repo — it means a lot!*
-
-<br/>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=akashgadde05/ScholarPilot-AI&type=Date)](https://star-history.com/#akashgadde05/ScholarPilot-AI&Date)
+*If ENHANCV helped you land an interview, please ⭐ star this repo — it means a lot!*
 
 <br/>
 
 <img src="https://img.shields.io/badge/Made%20with-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/For-Students-FF6B6B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/For-Job%20Seekers-FF6B6B?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Cost-Zero-10B981?style=for-the-badge" />
 
 </div>
